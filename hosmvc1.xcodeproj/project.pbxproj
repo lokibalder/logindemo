@@ -19,6 +19,10 @@
 		E6CFD55F18884A8700577A58 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6CFD54718884A8700577A58 /* UIKit.framework */; };
 		E6CFD56718884A8700577A58 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6CFD56518884A8700577A58 /* InfoPlist.strings */; };
 		E6CFD56918884A8700577A58 /* hosmvc1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CFD56818884A8700577A58 /* hosmvc1Tests.m */; };
+		E6CFD57818884AD300577A58 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CFD57618884AD200577A58 /* LoginViewController.m */; };
+		E6CFD57918884AD300577A58 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6CFD57718884AD200577A58 /* LoginViewController.xib */; };
+		E6CFD57C18884B6400577A58 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CFD57B18884B6400577A58 /* LoginModel.m */; };
+		E6CFD57F18884E2200577A58 /* RequestController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6CFD57E18884E2200577A58 /* RequestController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,13 @@
 		E6CFD56418884A8700577A58 /* hosmvc1Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hosmvc1Tests-Info.plist"; sourceTree = "<group>"; };
 		E6CFD56618884A8700577A58 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E6CFD56818884A8700577A58 /* hosmvc1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hosmvc1Tests.m; sourceTree = "<group>"; };
+		E6CFD57518884AD200577A58 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		E6CFD57618884AD200577A58 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		E6CFD57718884AD200577A58 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		E6CFD57A18884B6400577A58 /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
+		E6CFD57B18884B6400577A58 /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
+		E6CFD57D18884E2200577A58 /* RequestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestController.h; sourceTree = "<group>"; };
+		E6CFD57E18884E2200577A58 /* RequestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +118,9 @@
 		E6CFD54918884A8700577A58 /* hosmvc1 */ = {
 			isa = PBXGroup;
 			children = (
+				E6CFD57418884AA200577A58 /* controller */,
+				E6CFD57318884A9E00577A58 /* view */,
+				E6CFD57218884A9400577A58 /* model */,
 				E6CFD55218884A8700577A58 /* BNRAppDelegate.h */,
 				E6CFD55318884A8700577A58 /* BNRAppDelegate.m */,
 				E6CFD55518884A8700577A58 /* Images.xcassets */,
@@ -142,6 +156,34 @@
 				E6CFD56518884A8700577A58 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E6CFD57218884A9400577A58 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E6CFD57A18884B6400577A58 /* LoginModel.h */,
+				E6CFD57B18884B6400577A58 /* LoginModel.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		E6CFD57318884A9E00577A58 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				E6CFD57718884AD200577A58 /* LoginViewController.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		E6CFD57418884AA200577A58 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				E6CFD57518884AD200577A58 /* LoginViewController.h */,
+				E6CFD57618884AD200577A58 /* LoginViewController.m */,
+				E6CFD57D18884E2200577A58 /* RequestController.h */,
+				E6CFD57E18884E2200577A58 /* RequestController.m */,
+			);
+			name = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +264,7 @@
 			files = (
 				E6CFD54E18884A8700577A58 /* InfoPlist.strings in Resources */,
 				E6CFD55618884A8700577A58 /* Images.xcassets in Resources */,
+				E6CFD57918884AD300577A58 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6CFD55018884A8700577A58 /* main.m in Sources */,
+				E6CFD57C18884B6400577A58 /* LoginModel.m in Sources */,
+				E6CFD57F18884E2200577A58 /* RequestController.m in Sources */,
 				E6CFD55418884A8700577A58 /* BNRAppDelegate.m in Sources */,
+				E6CFD57818884AD300577A58 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
