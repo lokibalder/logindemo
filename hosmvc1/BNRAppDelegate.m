@@ -7,6 +7,7 @@
 //
 
 #import "BNRAppDelegate.h"
+#import "LoginViewController.h"
 
 @implementation BNRAppDelegate
 
@@ -16,6 +17,11 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    LoginViewController* loginViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    
+    self.window.rootViewController = loginViewController;
+    
     return YES;
 }
 
