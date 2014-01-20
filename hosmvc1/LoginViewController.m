@@ -43,6 +43,12 @@
     
 }
 
+- (void)viewWillUnload
+{
+    //remove all observer
+    [_loginModel removeObserver:self forKeyPath:@"loginInfo"];
+}
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if (object == _loginModel && [keyPath isEqualToString:@"loginInfo"])

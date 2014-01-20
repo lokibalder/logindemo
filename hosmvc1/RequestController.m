@@ -7,11 +7,16 @@
 //
 
 #import "RequestController.h"
+#import "ASIHTTPRequest.h"
 
 @implementation RequestController
 
 - (void) doLoginRequest:(LoginModel *)model
 {
+    //TODO
+    //model.loginInfo = @"login succeed";
+    //return;
+    
     NSLog(@"doLoginRequest<username:%@,password:%@>",
           model.username,
           model.password);
@@ -20,6 +25,7 @@
     
     //temp code
     //get request from server
+    /*
     NSString *urlStr = [NSString stringWithFormat:@"http://192.168.0.104:8848/minions_mock/file/ad/read.json"];
     NSURL *url = [NSURL URLWithString:urlStr];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -27,8 +33,23 @@
     NSData *resultData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:nil];
     NSString *dataString = [[NSString alloc] initWithData:resultData encoding:NSUTF8StringEncoding];
     NSLog(@"response %@",dataString);
+    */
     
-    model.loginInfo = @"login succeed";
+    //user asihttprequest
+    NSURL *url = [NSURL URLWithString:@"http://192.168.0.103:8848/minions_mock/file/ad/read.json"];
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    [request startSynchronous];
+    NSError *error = [request error];
+    if (!error) {
+        NSString *response = [request responseString];
+        NSLog(@"response %@",response);
+        
+        //process json
+        //TODO
+        
+    }
+    
+    model.loginInfo = NSLocalizedString(@"loginSuccInfo", @"login succedd info");
 }
 
 - (void) doGetHospitalNewsRequest

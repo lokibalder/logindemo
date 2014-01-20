@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RequestController.h"
+#import "TPKeyboardAvoidingScrollView.h"
 #import "LoginModel.h"
 
 @interface LoginViewController : UIViewController
@@ -18,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *loginInfoTextField;
+@property (weak, nonatomic) IBOutlet TPKeyboardAvoidingScrollView *scoreview;
 
 - (IBAction)pushLoginButton:(id)sender;
 
